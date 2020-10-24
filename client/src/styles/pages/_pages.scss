@@ -1,0 +1,167 @@
+// pages
+@import './login';
+@import './profile';
+@import './.notifications';
+@import './editProfile';
+@import './error';
+@import './deactivate';
+@import './explore';
+@import './home';
+@import './settings';
+@import './group';
+@import './messages';
+@import './hashtags';
+
+ .home_inst{
+     & .visoinst{
+         margin-bottom: 30px;
+     }
+ }
+
+.email_verification{
+    position: relative;
+    top: 210px;
+    left: 310px;
+    transform: translate(0%,0%);
+}
+
+.sectionAbout_one{
+    @include inst;
+    padding: 10px;
+    border-radius: 4px;
+    background: $ff;
+
+    & img{
+        width: 100%;
+    }
+
+    & .sectionAbout_info{
+        margin-top: 3px;
+
+        & span{
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        & a{
+            display: inline-block;
+            padding: 5px 12px;
+            font-weight: 600;
+
+            &:first-of-type{
+                margin-right: 3px;
+                margin-left: 22px;
+            }
+        }
+    }
+}
+
+//Help page
+.help_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+    & img{
+        width: 200px;
+    }
+}
+
+//Developer page
+ .developer_div{
+     @include inst;
+     position: relative;
+     width: 500px;
+     top: 0px;
+     left: 130px;
+     padding: 22px;
+     margin-bottom: 30px;
+     font-size: 15px;
+     background: $ff;
+
+     & img{
+         position: relative;
+         left: 39px;
+         margin-bottom: 10px;
+     }
+
+     & span{
+         display: block;
+
+         & > a{
+             color: $dark;
+             font-weight: 600;
+
+             &:hover{
+                 text-decoration: underline;
+             }
+         }
+      }
+
+   & > div {
+       margin-top: 22px;
+       text-align: right;
+
+       & > a{
+           display: inline-block;
+           padding: 4px 10px;
+           font-size: 13px;
+           font-weight: 600;
+       }
+   }
+ }
+
+ //Admin
+  .are_you_admin{
+      position: relative;
+      top: 160px;
+      left: 50px;
+      margin: 0 auto;
+      transform: translate(0%,0%);
+
+      & .show_passwrd{
+          right: 16px;
+          bottom: 55px;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

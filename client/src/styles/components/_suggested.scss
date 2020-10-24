@@ -1,0 +1,84 @@
+.recomm{
+    @include inst;
+
+    & .recomm_top{
+        @include header;
+        padding: 8px;
+
+        & span{
+            margin-left: 5px;
+            margin-right: 155px;
+            font-size: 15px;
+        }
+
+        & a{
+            margin-left: 5px;
+            font-size: 15px;
+            color: lightslategrey;
+
+            &.recomm_all{
+                margin-left: 12px;
+            }
+
+            &:hover{
+                color: $dark;
+            }
+        }
+    }
+
+    & .recomm_main{
+        margin-top: 7px;
+    }
+
+    & .spinner{
+        left: 641px !important;
+        top: 85px !important;
+    }
+
+    & .recomms{
+        position: relative;
+        height: 40px;
+        padding: 5px;
+        margin-bottom: 5px;
+
+        & img{
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        & .recomms_cont{
+            position: relative;
+            display: inline-block;
+            top: -6px;
+            margin-left: 5px;
+
+            & a{
+                color: $dark;
+                font-size: 14px;
+                font-weight: 600;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            & span{
+                display: block;
+                color: $d_light;
+            }
+        }
+
+        & .recomms_ff{
+            position: absolute;
+            display: inline-block;
+            top: 15px;
+            right: 11px;
+
+            & a{
+                padding: 5px 15px;
+            }
+        }
+    }
+}

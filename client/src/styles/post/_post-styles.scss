@@ -1,0 +1,32 @@
+@import 'filters';
+@import 'post-it';
+@import 'post';
+
+//Edit post
+.edit_post{
+  width: 300px;
+
+  & .e_p_bottom{
+      margin-top: 1px;
+  }
+}
+
+//View Post
+ .view_s{
+     margin-bottom: 30px;
+
+     & .spinner{
+        top: 175px;
+        left: 250px;
+     }
+
+     & .posts{
+        margin-top: 0px;
+     }
+ }
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+.noti_speak{
+    position: fixed;
+    top: 55px;
+    right: 50px;
+    width: 200px;
+    padding: 7px 5px 4px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    background: $ff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    z-index:1;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 15px;
+        width: 12px;
+        height: 12px;
+        border-top: 1px solid $ee;
+        border-left: 1px solid $ee;
+        background: $ff;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+
+    & img{
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        float: left;
+    }
+
+    & .n_s_sn_div{
+        position: relative;
+        width: 79%;
+        top: -2px;
+        margin-left: 6px;
+        float: left;
+    }
+
+    & .ns_bold{
+        font-weight: 600;
+    }
+}

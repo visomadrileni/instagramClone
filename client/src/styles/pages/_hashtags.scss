@@ -1,0 +1,44 @@
+.user-hashtags{
+    margin-top: 10px;
+
+    & .recomm_top span{
+        margin-right: 0px;
+        font-size: 14px;
+    }
+
+    & .recomm_main{
+        padding: 10px;
+        margin-top: 0px;
+
+        & .uh_link{
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            color: lightslategray;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.hashtag_info{
+    @include inst;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+    background: $ff;
+    color: $dark;
+
+    & span:first-of-type{
+        font-weight: 600;
+    }
+
+    & .no_of_tag_people{
+        position: absolute;
+        right: 20px;
+        font-size: 14px;
+    }
+}

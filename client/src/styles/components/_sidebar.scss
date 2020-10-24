@@ -1,0 +1,144 @@
+.m_n_wrapper{
+    position: fixed;
+    height: 91%;
+    width: 80px;
+    top: 60px;
+    right: 40px;
+
+    & > .m_n{
+        & img{
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            top: 8px;
+            border-radius: 50%;
+        }
+
+        & > ul > li > a {
+            position: relative;
+            display: block;
+            width: 170px;
+            padding: 5px 13px;
+            margin-top: 2px;
+            border-radius: 2px;
+            font-size: 14px;
+            color: #66757f;
+            outline: none;
+            
+
+            &:hover{
+                background: #ebf4fd;
+            }
+
+            &:focus{
+                background: #ebf4fd;
+                color: #1b2733;         
+            }
+
+            & > span.m_n_text{
+                position: relative;
+            }
+
+            & > span.m_n_icon{
+                position: absolute;
+                top: 8px;
+
+                & > span.m_n_icon > i{
+                    font-size: 23px;
+                }
+            }
+
+            & > span.m_n_new{
+                position: absolute;
+                right: 12px;
+                padding: 0px 6px;
+                border-radius: 50%;
+                font-size: 13px;
+                background: #54bbff;
+                color: $ff;
+            }
+        }
+
+        & .sidebar_active{
+            background: #ebf4fd;
+            color: $dark;
+
+            &::before{
+                content: "";
+                position: absolute;
+                height: 33px;
+                width:3px;
+                left: 0px;
+                top: 0px;
+                border-top-left-radius: 1px;
+                border-bottom-left-radius: 1px;
+                background: #0070e0;
+                z-index: 2;
+            }
+        }
+    }
+
+    & > .m_n_bottom{
+        position: fixed;
+        display: block;
+        width: 226px;
+        bottom: 20px;
+        text-align: center;
+
+        & ul{
+            position: relative;
+            display: block;        
+
+            & li {
+                float: left;
+                margin-right: 30px;
+
+                &:last-of-type::after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+
+        & a{
+            font-size: 14px;
+            color: #66757f;
+            outline: none;
+
+            &:hover{
+                color: #1b2733;
+            }
+
+            & a:focus{
+                color: #1b2733;
+            }
+
+            &:last-of-type{
+                display: block;
+            }
+        }
+    }
+
+    & .nav_options{
+        position: fixed;
+        left: 113px;
+        bottom: 65px;
+
+        &::after{
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 11px;
+            bottom: -6px;
+            right: 7px;
+            background: white;
+            border-bottom: 1px solid #dcdfe1;
+            border-right: 1px solid #dcdfe1;
+            transform: rotate(45deg);
+            z-index: -1;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+        }
+    }
+}

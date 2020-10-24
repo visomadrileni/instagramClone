@@ -1,0 +1,32 @@
+.error_div{
+    position: relative;
+    width: 436px;
+    top: 60px;
+    left: 230px;
+
+    .error_info{
+        width: 100%;
+        margin-bottom: 10px;
+        & span{
+            font-size: 20px;
+        }
+    }
+
+    .error_bottom{
+        margin-top: 3px;
+        text-align: right;
+
+        & a{
+            display: inline-block;
+            padding: 4px 15px;
+            font-size: 14px;
+            font-weight: 600;
+
+            &:last-of-type{
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+

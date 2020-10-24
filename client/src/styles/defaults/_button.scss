@@ -1,0 +1,106 @@
+.a_disabled{
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    background: #6ab9e8 !important;
+}
+
+.sec_btn_disabled{
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    background: #d8c3c3 !important;
+}
+
+ .sec_btn{
+     border-radius: 3px;
+     border: 1px solid $ee;
+     font-weight: 600;
+     background: $fb;
+     color: $dark;
+     outline: none;
+     cursor: pointer;
+
+     &:hover{
+         color: $dark;
+         background-color: #fff7f7;
+     }
+
+     &:focus{
+        color: $dark;
+        background-color: #fff7f7; 
+     }
+  }
+
+  .tir_btn{
+    border-radius: 3px;
+    border: 1px solid $ee;
+    font-weight: 600;
+    background: $ff;
+    color: $dark;
+    outline: none;
+    cursor: pointer;
+
+    &:hover{
+        color: $dark;
+        background-color: #ebf4fd;
+    }
+
+    &:focus{
+       color: $dark;
+       background-color: #ebf4fd; 
+    }
+  }
+
+  .follow{
+        border: 1px solid $pric !important;
+        background: $pric !important;
+  }
+
+ .unfollow{
+     background: #6ae03b !important;
+     color: white !important;
+     border: 1px solid #6ae03b !important;
+
+     &:focus{
+         background: #fbf2f2;
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

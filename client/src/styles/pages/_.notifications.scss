@@ -1,0 +1,103 @@
+.notifications_div{
+    width: 600px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    overflow: hidden;
+
+    & .notifications_header{
+        padding: 5px;
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+
+        & span.noti_count{
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        & span.clear_noti{
+            position: relative;
+            display: inline-block;
+            height: 24px;
+            padding: 0px 2px;
+            border: 1px solid $fb;
+            border-radius: 2px;
+            text-align: right;
+            color: $d_light;
+            cursor: pointer;
+
+            &:hover{
+                border: 1px solid $ee;
+            }
+        }
+    }
+
+    & .noti{
+        position: relative;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid $header_border;
+        border-radius: 3px;
+        background: $ff;
+        font-size: 14px;
+        text-align: left;
+
+       & img{
+           height: 40px;
+           width: 40px;
+           border-radius: 50%;
+       }
+
+       & .noti_avatar{
+           margin-right: 5px;
+       }
+
+       & .noti_left{
+           position: relative;
+           display: inline-block;
+           top: -5px;
+
+           & span.noti_time{
+               display: block;
+               font-size: 13px;
+               color: $d_light;
+           }
+
+           & .noti_bald{
+               font-size: 13px;
+               font-weight: 600;
+               color: $dark;
+               outline: none;
+
+               &:hover{
+                   text-decoration: underline;
+               }
+           }
+       }
+
+       & .noti_right{
+           position: absloute;
+           display: inline-block;
+
+           & > a{
+               display: inline-block;
+               padding: 4px 15px;
+               font-size: 13px;
+               font-weight: 600;
+           }
+       }
+
+       & .action_noti_right{
+           height: 40px;
+           right: 10px;
+       }
+
+       & .follow_noti_right{
+           top: 16px;
+           right: 10px;
+       }
+    }
+}

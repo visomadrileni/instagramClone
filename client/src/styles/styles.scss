@@ -1,0 +1,92 @@
+// variables
+@import 'variables/variables';
+// mixins
+@import 'mixins/mixins';
+// defaults
+@import 'defaults/defaults';
+// components
+@import 'components/components';
+// post
+@import 'post/post-styles';
+// pages
+@import 'pages/pages';
+
+//Preload [App Loading]
+.preload{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    background-image: linear-gradient(120deg,rgba(161, 239, 255, 0.329),rgba(255, 253, 208, 0.568));
+    z-index: 3;
+
+   & .preload_spinner{
+       position: absolute;
+       top: 50%;
+       left: 37%;
+       transform: translate(-50%,-50%);
+
+       & span{
+           background: #da85af !important;
+       }
+   } 
+}
+
+//Top Wrapper
+ .wrapp_routes{
+     position: relative;
+     display: block;
+     width: 700px;
+     top: 62px;
+     left: 30px;
+ }
+
+ .wrapper_s{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+ }
+
+ .wrapper_p{
+     width: 490px;
+ }
+
+ .wrapper_k{
+     width: 300px;
+     border-radius: 4px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

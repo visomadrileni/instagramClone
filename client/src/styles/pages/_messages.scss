@@ -1,0 +1,494 @@
+.messages{
+    display:flex;
+    justify-content: space-between;
+
+    & .message_left{
+        position: relative;
+        width: 310px;
+        margin-bottom: 30px;
+
+        & .message_new{
+            margin-bottom: 10px;
+            text-align: left;
+
+         & a{
+             display: inline-block;
+             padding: 5px 14px;
+             font-size: 14px;
+
+             & i{
+                 margin-right: 6px;
+             }
+
+             &:first-of-type{
+                 margin-right: 3px;
+             }
+         }
+
+         //Search users to create new conversation
+         & .search_followings{
+             margin-top: 7px;
+
+             & input[type="text"]{
+                 width: 95%;
+                 border-radius: 3px;
+             }
+
+             & .p_tagging_list{
+                 width: 95%;
+                 max-height: 300px;
+
+                 & li{
+                     text-align: initial;
+                 }
+             }
+         }
+
+         //Online users
+         & .modal .modal_it_info{
+             text-align: initial;
+         }
+        }
+
+        & .con_count{
+            position: relative;
+            display: block;
+            margin-top: 13px;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+    //Conversation teaser
+    & .message_sr{
+        @include inst;
+        position: relative;
+        height: 40px;
+        padding: 7px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover{
+            background: $fb;
+        }
+
+        & > img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        & .m_sr_content{
+            position: relative;
+            display: inline-block;
+            width: 65%;
+            top: -6px;
+            margin-left: 5px;
+
+            & .m_sr_username{
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                font-weight: 600;
+                overflow: hidden;
+            }
+
+            & .m_sr_light{
+                display: inline-block;
+                color: $d_light;
+                word-break: break-all;
+
+                & .camera{
+                    margin-left: 3px;
+
+                    & .retro{
+                        margin-right: 4px;
+                    }
+                }
+
+                & .message_sent {
+                    position: relative;
+                    display: inline-block;
+                    top: 3px;
+                    margin-right: 3px;
+                    color: $d_light;
+
+                    & i{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    & .m_sr_time{
+        position: absolute;
+        top: 4px;
+        right: 7px;
+        color: $dark;
+     }
+
+     & .m_sr_unread{
+        position: absolute;
+        right: 12px;
+        bottom: 8px;
+        padding: 0px 6px;
+        border-radius: 3px;
+        font-size: 13px;
+        background: #54bbff;
+        color: $ff;
+     }
+    }
+
+    & .message_sr_toggle{
+        background: $fb;
+        animation: pro_active 0.1s ease-in-out;
+    }
+  }
+
+
+  & .message_right{
+      height: 565px;
+      width: 475px;
+
+      & .spinner{
+          top: 150px;
+          left: 650px;
+      }
+
+    //Conversation
+    & .message_messages{
+        position: fixed;
+        height: 565px;
+        width: 473px;
+        top: 62px;
+        border-bottom: none;
+        border-radius: 3px;
+        border: 1px solid $header_border;
+        background: $ff;
+        z-index: 2;
+
+        & .m_m_top{
+            position: relative;
+            height: 35px;
+            padding: 10px;
+            border-bottom: 1px solid #edf0f5;
+            background: #f6f7f9;
+
+            & img.con_with_avatar{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+            }
+
+           & .m_m_t_c{
+               position: relative;
+               display: inline-block;
+               width: 82%;
+               top: -3px;
+               margin-left: 5px;
+
+               & .con_name{
+                   position: relative;
+                   height: 19px;
+                   font-size: 14px;
+                   font-weight: 600;
+                   color: $dark;
+                   overflow: hidden;
+                   outline: none;
+
+                   &:hover{
+                       text-decoration: underline;
+                   }
+               }
+
+               & .m_m_t_useless{
+                   display: block;
+                   color: $d_light;
+               }
+           }
+
+           & .m_m_exp{
+               position: absolute;
+               display: inline-block;
+               height: 24px;
+               top: 13px;
+               right: 13px;
+               padding: 1px;
+               border: 1px solid #f6f7f9;
+               border-radius: 2px;
+               color: $d_light;
+               cursor: pointer;
+
+               &:hover{
+                   border: 1px solid $ee;
+                   background: #e6f9f9;
+                   color: $dark;
+               }
+           }
+
+           & .message_options{
+               top: 55px;
+               left: 299px;
+
+               & ul li a,
+               & ul li label{
+                   width: 132px !important;
+                   cursor: pointer;
+               }
+
+               &::before{
+                   content: "";
+                   position: absolute;
+                   height: 11px;
+                   width: 11px;
+                   top: -6px;
+                   right: 9px;
+                   border-top: 1px solid #dcdfe1;
+                   border-left: 1px solid #dcdfe1;
+                   background: $ff;
+                   transform: rotate(45deg);
+                   z-index: -1;
+               }
+           }
+        }
+
+        & .m_m_wrapper{
+            position: relative;
+            padding-bottom: 10px;
+
+            & .m_m_main{
+                position: relative;
+                padding: 10px 15px 0px 10px;
+
+                & .m_m_divs{
+                    display: inline-block;
+                    width: 100%;
+                    margin-bottom: 13px;
+
+                    & .m_m{
+                        position: relative;
+                        display: inline-block;
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        outline: none;
+
+                        & .m_m_img{
+                            width: 200px;
+                        }
+
+                        & .m_m_sticker{
+                            width: 64px;
+                        }
+                    }
+
+                    & .mssg_sr_toggle{
+                        display: block;
+                        margin-top: 1px;
+                        margin-right: 12px;
+                        margin-left: 12px;
+                        font-size: 12px;
+                        color: #aabec2;
+                    }
+
+                    & .m_m_tools{
+                        margin-top: 3px;
+
+                      & > div > span{
+                          display: inline-block;
+                          height: 17px;
+                          margin-right: 4px;
+                          cursor: pointer;
+                          color: #aab8c2;
+
+                          &:first-of-type{
+                              margin-left: 10px;
+                          }
+
+                          &:hover{
+                              color: $d_light;
+                          }
+
+                          & i {
+                              font-size: 17px;
+                          }
+                      }  
+                    }
+                }
+
+               & .my_mm_div{
+                   text-align: right;
+
+                   & .m_m{
+                       margin-right: 10px;
+                       text-align: left;
+                       background: #1da1f2;
+                       color: $ff;
+
+                       &::after{
+                           content: "";
+                           position: absolute;
+                           height: 12px;
+                           width: 12px;
+                           top: 11px;
+                           right: -7px;
+                           transform: rotate(45deg);
+                           border: 1px solid #1da1f2;
+                           background: #1da1f2;
+                       }
+
+                       & .hashtag{
+                           color: $ff;
+                       }
+                   }
+               } 
+
+             & .not_my_mm_div{
+                 text-align: left;
+
+                 & .m_m{
+                     margin-left: 8px;
+                     text-align: left;
+                     background: #eff3f6;
+
+                     &::before{
+                         content: "";
+                         position: absolute;
+                         height: 13px;
+                         width: 13px;
+                         top: 11px;
+                         left: -8px;
+                         transform: rotate(45deg);
+                         border: 1px solid #eff3f6;
+                         background: #eff3f6;
+                     }
+                 }
+             }
+
+             & .mssg_end{
+                 display: block;
+                 height: 1px;
+                 width: 100%;
+             }
+           }
+         }
+
+
+         & .m_m_bottom{
+             padding: 10px 8px;
+             border: 1px solid #eee;
+             background: #f6f7f9;
+
+             & textarea{
+                 height: 35px;
+                 width: 96%;
+                 padding: 7px;
+                 margin-bottom: 2px;
+             }
+
+             & input[type="submit"]{
+                 position: relative;
+                 left: 390px;
+                 padding: 7px 12px;
+                 font-size: 14px;
+             }
+
+             & .mssg_emoji_btn{
+                 position: absolute;
+                 display: inline-block;
+                 height: 22px;
+                 right: 80px;
+                 bottom: 15px;
+                 color: #aab8c2;
+                 cursor: pointer;
+
+               &:hover{
+                   color: $d_light;
+               }
+
+               & i{
+                   font-size: 22px;
+               }
+            }
+         }
+      }
+
+      //About conversation
+      .about_conversation{
+          padding: 10px;
+
+          & > div {
+              margin-top: 20px;
+          }
+
+          & .sli_label{
+              display: block;
+              color: $d_light;
+          }
+
+          & .sli_bold{
+              font-weight: 600;
+          }
+
+          & .sli_with_div{
+              margin-top: 0px;
+
+              & .sli_with{
+                  margin-top: 5px;
+
+                  & img{
+                      display: inline-block;
+                      width: 40px;
+                      border-radius: 50%;
+                  }
+
+                  & .sli_with_cont{
+                      position: relative;
+                      display: inline-block;
+                      width: 87%;
+                      top: -5px;
+                      margin-left: 6px;
+
+                      & > a{
+                          font-weight: 600;
+                          color: $dark;
+
+                         &:hover{
+                             text-decoration: underline;
+                         } 
+                      }
+
+                      & .span.sli_w{
+                          position: relative;
+                          display: block;
+                          top: -3px;
+                          font-size: 13px;
+                      }
+                  }
+              }
+          }
+
+          & .sli_media{
+              margin-bottom: 20px;
+
+             & span{
+                 margin-bottom: 4px;
+             } 
+
+             & .sli_media_img{
+                 height: 120px;
+                 width: 120px;
+                 margin-right: 5px;
+                 margin-bottom: 5px;
+                 border-radius: 3px;
+                 cursor: pointer;
+
+                 &:hover{
+                     transform: scale(1.03);
+                 }
+             }
+          }
+      }
+    }
+ }

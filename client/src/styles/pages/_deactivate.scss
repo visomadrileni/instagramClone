@@ -1,0 +1,20 @@
+.deactivate{
+    width: 500px;
+
+    & .deactivate_title{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    & .deactivate_btn{
+        display: block;
+        margin-top: 11px;
+        text-align: right;
+
+    & a{
+        display: inline-block;
+        padding: 4px 10px;
+      }
+    }
+}
